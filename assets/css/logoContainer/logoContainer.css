@@ -1,0 +1,55 @@
+/*Contenedor de logotipo y autor centralizados verticalmente posicionados
+uno al lado del otro con una ancho de 172.8px y altura de 88px*/
+.logo-container {
+    align-items: center;
+    display: flex;
+    height: inherit;
+    justify-content: center;
+    width: 4.5em; /* Incrementando el ancho para acomodar un logotipo más grande */
+}
+
+/*Logotipo principal del header con un tamaño de 88px*/
+.logo-container__logo {
+    width: 4em; /* Incrementando el tamaño del logotipo */
+    /*2.2 movil - tablet*/
+}
+
+/*Link envolvente del logotipo sin subrayado*/
+.logoContainer__link {
+    text-decoration: none;
+}
+
+/*Tablets y celulares grandes u horizontales*/
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+
+    /*Aumentando la altura del container y ancho completo 48px*/
+    .logo-container {
+        height: 4em; /* Ajustando la altura si es necesario */
+        width: 100%;
+    }
+
+    /*Cambiando la dirección flex a columna y disminuyendo
+    el tamaño del logo*/
+    .logo-container__logo {
+        flex-direction: column;
+        /* Ajustar según el nuevo tamaño necesario */
+        width: 3em; /* Ajustar el tamaño para tablets */
+    }
+}
+
+/*Celulares verticales*/
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+
+    /*Aumentando la altura del container y ancho completo 48px*/
+    .logo-container {
+        height: 4em; /* Ajustando la altura si es necesario */
+        width: 100%;
+    }
+
+    /*Cambiando la dirección flex a columna y disminuyendo
+    el tamaño del logo*/
+    .logo-container__logo {
+        flex-direction: column;
+        width: 3em; /* Ajustar el tamaño para móviles */
+    }
+}
